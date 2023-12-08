@@ -3682,7 +3682,7 @@ class RepoFilter(object):
   def _setup_output(self):
     if not self._args.dry_run:
       location = ['-C', self._args.target] if self._args.target else []
-      fip_cmd = ['git'] + location + ['-c', 'core.ignorecase=false',
+      fip_cmd = ['git'] + location + ['-c', 'core.ignorecase=False',
                                       'fast-import', '--force', '--quiet']
       if date_format_permissive:
         fip_cmd.append('--date-format=raw-permissive')
